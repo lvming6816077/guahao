@@ -1,0 +1,18 @@
+{
+  "name": "guahao-decrypt-tool",
+  "version": "1.0.0",
+  "description": "挂号系统解密工具",
+  "main": "decrypt-server.js",
+  "scripts": {
+    "start": "node decrypt-server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "crypto-js": "^4.1.1",
+    "express": "^4.17.1"
+  },
+  "keywords": ["decrypt", "express"],
+  "author": "",
+  "license": "ISC"
+}

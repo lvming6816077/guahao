@@ -1,0 +1,92 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="manifest" href="manifest.json">
+
+<meta name="referrer" content="never">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="application-name" content="吕小鸣">
+<meta name="apple-mobile-web-app-title" content="吕小鸣">
+<meta name="msapplication-starturl" content="/">
+  
+<title>抢号</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+<script type="text/javascript" src="https://weixinnode.ngarihealth.com/weixin/??lib/logger-b536aacb.js,lib/crypto/crypto-js-min-d997358e.js,ngari/rmi/serviceAdapter-ba4f99d5.js,lib/ionic/ionic-bundle-bd7a005d.js,ngari/ionicInit-69999181.js,eh/wx/health/config-e0ee0c34.js,lib/xss-71e104bf.js,lib/sm2-5e3de0e3.js,ngari/utils/DologMgr-3867921b.js"></script>
+<script type="text/javascript" src="https://weixinnode.ngarihealth.com/weixin/ngari/boot-5661d798.js"></script>
+<script type="text/javascript">
+  
+</script>
+
+
+<script type="text/javascript">
+let token = '198378dd-b2ea-481c-a85f-a3ff83474dc7'
+let jsonData = [{
+  "mpiid": "2c90821f869794890186b69ff61112d6",
+  "patientName": "吕鸣",
+  "organAppointId": "",
+  "scheduleId": 146543741,
+  "scheduleTimeId": "4",
+  "orderNumSopt": "08:00",
+  "organId": 1004211,
+  "appointDepartId": "0058",
+  "appointDepartName": "内科五",
+  "doctorId": 107998,
+  "workDate": "2025-03-19 00:00:00",
+  "workType": 4,
+  "startTime": "2025-03-19 08:00:00",
+  "endTime": "2025-03-19 12:00:00",
+  "orderNum": 1,
+  "appointRoad": 5,
+  "appointStatus": 0,
+  "appointPath": 9,
+  "appointUser": "2c90821f869794890186b69ff61112d6",
+  "appointName": "吕鸣",
+  "appointOragn": "",
+  "clinicPrice": 15.5,
+  "transferId": 0,
+  "sourceLevel": 2,
+  "clinicId": "473733",
+  "ifCreateFollowPlan": 1,
+  "cardId": "410104199012270074",
+  "triggerId": null,
+  "medInsureCarId": "",
+  "appointRecordExt": {
+    "illSummaryTxt": "",
+    "thirdChannel": null
+  },
+  "analyzeNvcData": "",
+  "ruleString": "",
+  "isRealTime": 0,
+  "cardType": "1"
+}]
+$ajax({
+  jsonData:jsonData,
+  url:'https://weixin.ngarihealth.com/weixin/wx/mp/wxf011d4f784d01944/gateway',
+  params:{
+    useAES:true
+  },
+  headers:{
+
+    'X-Access-Token': token,
+    'X-Client-Id': '110614067',
+
+    'X-Service-Id': 'appoint.requestAppointRecordService',
+    'X-Service-Method': 'addAppointRecord',
+    'X-Client-Source': 'eh.wx.health.doctor.AppointApply',
+  }
+}).then(response => {
+    console.log('Response:', response);
+})
+.catch(error => {
+    console.error('Error:', error);
+});
+</script>
+</head>
+<body>
+
+</body>
+</html>
